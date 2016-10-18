@@ -12,11 +12,12 @@ title: ArtDis
     max-height: 100%;
   }
 </style>
-<h2>111</h2>
 <ul>
+  {% directory path: img exclude: private %}
     <li>
-      <img id="artimg" src="" />
+      {{ file.name }}
     </li>
+  {% enddirectory %}
 </ul>
 
 <img id="artimg" src="" />
