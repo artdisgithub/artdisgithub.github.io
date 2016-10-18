@@ -12,6 +12,7 @@ title: ArtDis
 <script>
   $(document).ready(
     function() {
+      var art = getParameterByName('art');
       val2 = $("[value*='"+art+"'").val();
       $("#artimg").attr('src', val2);
     }
