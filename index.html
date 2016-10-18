@@ -12,15 +12,12 @@ title: ArtDis
     max-height: 100%;
   }
 </style>
-<ul>
- {% for myimage in site.static_files %}
-  {% if myimage.path contains '1' %}
-  <li>{{myimage.path}}</li>
- {% endif %}
- {% endfor %}
-</ul>
 
+{% for tmpfile in site.static_files %}
+ <input type="hidden" value="{{tmpfile.path}}" />
+{% endfor %}
 <img id="artimg" src="" />
+
 
 <script>
   
@@ -36,7 +33,7 @@ title: ArtDis
       
       var art = getParameterByName('art');
       val2 = $("[value*='"+art+"']").val();
-      $("#artimg").attr('src', "img/" + val2); 
+      $("#artimg").attr('src', val2); 
     }
   );
 </script>
