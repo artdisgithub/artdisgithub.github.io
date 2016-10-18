@@ -13,11 +13,20 @@ title: ArtDis
   <img id="artimg" src="" />
 </div>
 <script>
+  
+  function set_body_height() { // set body height = window height
+    $('body').height($(window).height());
+  }
+  
   $(document).ready(
     function() {
+      
+      $(window).bind('resize', set_body_height);
+      set_body_height();
+      
       var art = getParameterByName('art');
       val2 = $("[value*='"+art+"']").val();
-      $("#artimg").attr('src', "img/" + val2);
+      $("#artimg").attr('src', "img/" + val2); 
     }
   );
 </script>
