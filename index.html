@@ -14,7 +14,7 @@ title: ArtDis
     function() {
       var art = getParameterByName('art');
       val2 = $("[value*='"+art+"']").val();
-      $("#artimg").attr('src', val2);
+      $("#artimg").attr('src', "img/" + val2);
     }
   );
 </script>
