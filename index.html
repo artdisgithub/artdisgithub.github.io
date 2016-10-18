@@ -6,7 +6,7 @@ title: ArtDis
 <h1>АртДис</h1>
 <h2>всё для декора</h2>
 {% for art in site.data.arts %}
-  <input type="hidden" value="{{ art.path }}" /><br />
+  <input type="hidden" value="{{ art.path }}" />
 {% endfor %}
 <img id="artimg" src="" />
 <script>
