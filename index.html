@@ -12,6 +12,11 @@ title: ArtDis
     max-height: 100%;
   }
 </style>
+
+{% loop_directory directory:img iterator:image filter:*.* sort:descending %}
+   <img src="{{ image }}" />
+{% endloop_directory %}
+
 {% for art in site.data.arts %}
   <input type="hidden" value="{{ art.path }}" />
 {% endfor %}
