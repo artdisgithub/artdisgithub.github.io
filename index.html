@@ -2,7 +2,10 @@
 layout: default
 title: ArtDis
 ---
-
+<style>
+  .img_wrap {height: 100%;}
+  .img_wrap img {width: 100%;}
+</style>
 {% for art in site.data.arts %}
   <input type="hidden" value="{{ art.path }}" />
 {% endfor %}
