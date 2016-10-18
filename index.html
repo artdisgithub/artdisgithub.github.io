@@ -17,9 +17,15 @@ title: ArtDis
    <img src="{{ image }}" />
 {% endloop_directory %}
 
-{% for art in site.data.arts %}
-  <input type="hidden" value="{{ art.path }}" />
-{% endfor %}
+<ul>
+  {% directory path: images exclude: private %}
+    <li>
+      <img src="{{ file.url }}"
+           alt="{{ file.name }}"
+           datetime="{{ file.date | date_to_xmlschema }}" />
+    </li>
+  {% enddirectory %}
+</ul>
 
 <img id="artimg" src="" />
 
