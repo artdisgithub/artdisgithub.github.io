@@ -5,6 +5,8 @@ title: ArtDis
 
 <h1>АртДис</h1>
 <h2>всё для декора</h2>
-<script>alert(art);</script>
+{% for art in site.data.art %}
+  {{ art.path }}<br />
+{% endfor %}
 
 
