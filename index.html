@@ -13,11 +13,11 @@ title: ArtDis
   }
 </style>
 <ul>
-  {% directory path: img exclude: private %}
-    <li>
-      {{ file.name }}
-    </li>
-  {% enddirectory %}
+ {% for myimage in site.static_files %}
+  {% if myimage.path contains '1' %}
+  <li>{{myimage.path}}</li>
+ {% endif %}
+ {% endfor %}
 </ul>
 
 <img id="artimg" src="" />
