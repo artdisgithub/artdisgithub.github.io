@@ -6,7 +6,17 @@ title: ArtDis
 <h1>АртДис</h1>
 <h2>всё для декора</h2>
 {% for art in site.data.arts %}
-  {{ art.path }}<br />
+  <input type="hidden" value="{{ art.path }}" /><br />
 {% endfor %}
+<img id="artimg" src="" />
+<script>
+  $(document).ready(
+    function
+    {
+    val2 = $("[value*='"+val+"'").val();
+    $("#artimg").attr('src', val2);
+    }
+  );
+</script>
 
 
