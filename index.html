@@ -14,13 +14,9 @@ title: ArtDis
 </style>
 <h2>111</h2>
 <ul>
-  {% directory path: img exclude: private %}
     <li>
-      <img src="{{ file.url }}"
-           alt="{{ file.name }}"
-           datetime="{{ file.date | date_to_xmlschema }}" />
+      <img id="artimg" src="" />
     </li>
-  {% enddirectory %}
 </ul>
 
 <img id="artimg" src="" />
