@@ -6,7 +6,9 @@ title: ArtDis
 {% for art in site.data.arts %}
   <input type="hidden" value="{{ art.path }}" />
 {% endfor %}
-<img id="artimg" src="" />
+<div class="img_wrap">
+  <img id="artimg" src="" />
+</div>
 <script>
   $(document).ready(
     function() {
